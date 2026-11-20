@@ -1,0 +1,2392 @@
+{
+  "meta": {
+    "name": "small",
+    "seed": 42,
+    "num_ingredients": 200,
+    "num_recipes": 80,
+    "description": "Recipes as sets of ingredient IDs, for the minimum k-union problem: choose k recipes whose combined ingredient list is as small as possible."
+  },
+  "ingredients": [
+    {
+      "id": 0,
+      "name": "onion",
+      "category": "vegetable"
+    },
+    {
+      "id": 1,
+      "name": "lemon",
+      "category": "fruit"
+    },
+    {
+      "id": 2,
+      "name": "chicken breast",
+      "category": "protein"
+    },
+    {
+      "id": 3,
+      "name": "butter",
+      "category": "dairy"
+    },
+    {
+      "id": 4,
+      "name": "basmati rice",
+      "category": "grain"
+    },
+    {
+      "id": 5,
+      "name": "black pepper",
+      "category": "herb_spice"
+    },
+    {
+      "id": 6,
+      "name": "soy sauce",
+      "category": "sauce"
+    },
+    {
+      "id": 7,
+      "name": "salt",
+      "category": "pantry"
+    },
+    {
+      "id": 8,
+      "name": "garlic",
+      "category": "vegetable"
+    },
+    {
+      "id": 9,
+      "name": "lime",
+      "category": "fruit"
+    },
+    {
+      "id": 10,
+      "name": "chicken thigh",
+      "category": "protein"
+    },
+    {
+      "id": 11,
+      "name": "milk",
+      "category": "dairy"
+    },
+    {
+      "id": 12,
+      "name": "jasmine rice",
+      "category": "grain"
+    },
+    {
+      "id": 13,
+      "name": "cumin",
+      "category": "herb_spice"
+    },
+    {
+      "id": 14,
+      "name": "tomato puree",
+      "category": "sauce"
+    },
+    {
+      "id": 15,
+      "name": "olive oil",
+      "category": "pantry"
+    },
+    {
+      "id": 16,
+      "name": "tomato",
+      "category": "vegetable"
+    },
+    {
+      "id": 17,
+      "name": "apple",
+      "category": "fruit"
+    },
+    {
+      "id": 18,
+      "name": "beef mince",
+      "category": "protein"
+    },
+    {
+      "id": 19,
+      "name": "cheddar",
+      "category": "dairy"
+    },
+    {
+      "id": 20,
+      "name": "long grain rice",
+      "category": "grain"
+    },
+    {
+      "id": 21,
+      "name": "paprika",
+      "category": "herb_spice"
+    },
+    {
+      "id": 22,
+      "name": "chopped tomatoes",
+      "category": "sauce"
+    },
+    {
+      "id": 23,
+      "name": "vegetable oil",
+      "category": "pantry"
+    },
+    {
+      "id": 24,
+      "name": "carrot",
+      "category": "vegetable"
+    },
+    {
+      "id": 25,
+      "name": "banana",
+      "category": "fruit"
+    },
+    {
+      "id": 26,
+      "name": "eggs",
+      "category": "protein"
+    },
+    {
+      "id": 27,
+      "name": "parmesan",
+      "category": "dairy"
+    },
+    {
+      "id": 28,
+      "name": "spaghetti",
+      "category": "grain"
+    },
+    {
+      "id": 29,
+      "name": "smoked paprika",
+      "category": "herb_spice"
+    },
+    {
+      "id": 30,
+      "name": "passata",
+      "category": "sauce"
+    },
+    {
+      "id": 31,
+      "name": "sesame oil",
+      "category": "pantry"
+    },
+    {
+      "id": 32,
+      "name": "potato",
+      "category": "vegetable"
+    },
+    {
+      "id": 33,
+      "name": "orange",
+      "category": "fruit"
+    },
+    {
+      "id": 34,
+      "name": "salmon",
+      "category": "protein"
+    },
+    {
+      "id": 35,
+      "name": "mozzarella",
+      "category": "dairy"
+    },
+    {
+      "id": 36,
+      "name": "penne",
+      "category": "grain"
+    },
+    {
+      "id": 37,
+      "name": "chilli flakes",
+      "category": "herb_spice"
+    },
+    {
+      "id": 38,
+      "name": "chicken stock",
+      "category": "sauce"
+    },
+    {
+      "id": 39,
+      "name": "sugar",
+      "category": "pantry"
+    },
+    {
+      "id": 40,
+      "name": "bell pepper",
+      "category": "vegetable"
+    },
+    {
+      "id": 41,
+      "name": "mango",
+      "category": "fruit"
+    },
+    {
+      "id": 42,
+      "name": "prawns",
+      "category": "protein"
+    },
+    {
+      "id": 43,
+      "name": "feta",
+      "category": "dairy"
+    },
+    {
+      "id": 44,
+      "name": "fusilli",
+      "category": "grain"
+    },
+    {
+      "id": 45,
+      "name": "turmeric",
+      "category": "herb_spice"
+    },
+    {
+      "id": 46,
+      "name": "vegetable stock",
+      "category": "sauce"
+    },
+    {
+      "id": 47,
+      "name": "brown sugar",
+      "category": "pantry"
+    },
+    {
+      "id": 48,
+      "name": "spinach",
+      "category": "vegetable"
+    },
+    {
+      "id": 49,
+      "name": "pineapple",
+      "category": "fruit"
+    },
+    {
+      "id": 50,
+      "name": "tofu",
+      "category": "protein"
+    },
+    {
+      "id": 51,
+      "name": "greek yogurt",
+      "category": "dairy"
+    },
+    {
+      "id": 52,
+      "name": "egg noodles",
+      "category": "grain"
+    },
+    {
+      "id": 53,
+      "name": "garam masala",
+      "category": "herb_spice"
+    },
+    {
+      "id": 54,
+      "name": "beef stock",
+      "category": "sauce"
+    },
+    {
+      "id": 55,
+      "name": "cornflour",
+      "category": "pantry"
+    },
+    {
+      "id": 56,
+      "name": "mushroom",
+      "category": "vegetable"
+    },
+    {
+      "id": 57,
+      "name": "raisins",
+      "category": "fruit"
+    },
+    {
+      "id": 58,
+      "name": "chickpeas",
+      "category": "protein"
+    },
+    {
+      "id": 59,
+      "name": "natural yogurt",
+      "category": "dairy"
+    },
+    {
+      "id": 60,
+      "name": "rice noodles",
+      "category": "grain"
+    },
+    {
+      "id": 61,
+      "name": "coriander seeds",
+      "category": "herb_spice"
+    },
+    {
+      "id": 62,
+      "name": "coconut milk",
+      "category": "sauce"
+    },
+    {
+      "id": 63,
+      "name": "baking powder",
+      "category": "pantry"
+    },
+    {
+      "id": 64,
+      "name": "courgette",
+      "category": "vegetable"
+    },
+    {
+      "id": 65,
+      "name": "coconut",
+      "category": "fruit"
+    },
+    {
+      "id": 66,
+      "name": "red lentils",
+      "category": "protein"
+    },
+    {
+      "id": 67,
+      "name": "double cream",
+      "category": "dairy"
+    },
+    {
+      "id": 68,
+      "name": "udon noodles",
+      "category": "grain"
+    },
+    {
+      "id": 69,
+      "name": "ground coriander",
+      "category": "herb_spice"
+    },
+    {
+      "id": 70,
+      "name": "fish sauce",
+      "category": "sauce"
+    },
+    {
+      "id": 71,
+      "name": "peanut butter",
+      "category": "pantry"
+    },
+    {
+      "id": 72,
+      "name": "broccoli",
+      "category": "vegetable"
+    },
+    {
+      "id": 73,
+      "name": "blueberries",
+      "category": "fruit"
+    },
+    {
+      "id": 74,
+      "name": "black beans",
+      "category": "protein"
+    },
+    {
+      "id": 75,
+      "name": "sour cream",
+      "category": "dairy"
+    },
+    {
+      "id": 76,
+      "name": "bread",
+      "category": "grain"
+    },
+    {
+      "id": 77,
+      "name": "curry powder",
+      "category": "herb_spice"
+    },
+    {
+      "id": 78,
+      "name": "oyster sauce",
+      "category": "sauce"
+    },
+    {
+      "id": 79,
+      "name": "peanuts",
+      "category": "pantry"
+    },
+    {
+      "id": 80,
+      "name": "cucumber",
+      "category": "vegetable"
+    },
+    {
+      "id": 81,
+      "name": "strawberries",
+      "category": "fruit"
+    },
+    {
+      "id": 82,
+      "name": "kidney beans",
+      "category": "protein"
+    },
+    {
+      "id": 83,
+      "name": "cream cheese",
+      "category": "dairy"
+    },
+    {
+      "id": 84,
+      "name": "tortilla wraps",
+      "category": "grain"
+    },
+    {
+      "id": 85,
+      "name": "oregano",
+      "category": "herb_spice"
+    },
+    {
+      "id": 86,
+      "name": "sweet chilli sauce",
+      "category": "sauce"
+    },
+    {
+      "id": 87,
+      "name": "cashews",
+      "category": "pantry"
+    },
+    {
+      "id": 88,
+      "name": "red onion",
+      "category": "vegetable"
+    },
+    {
+      "id": 89,
+      "name": "dates",
+      "category": "fruit"
+    },
+    {
+      "id": 90,
+      "name": "bacon",
+      "category": "protein"
+    },
+    {
+      "id": 91,
+      "name": "halloumi",
+      "category": "dairy"
+    },
+    {
+      "id": 92,
+      "name": "pitta bread",
+      "category": "grain"
+    },
+    {
+      "id": 93,
+      "name": "basil",
+      "category": "herb_spice"
+    },
+    {
+      "id": 94,
+      "name": "hoisin sauce",
+      "category": "sauce"
+    },
+    {
+      "id": 95,
+      "name": "almonds",
+      "category": "pantry"
+    },
+    {
+      "id": 96,
+      "name": "spring onion",
+      "category": "vegetable"
+    },
+    {
+      "id": 97,
+      "name": "pork mince",
+      "category": "protein"
+    },
+    {
+      "id": 98,
+      "name": "ricotta",
+      "category": "dairy"
+    },
+    {
+      "id": 99,
+      "name": "naan",
+      "category": "grain"
+    },
+    {
+      "id": 100,
+      "name": "thyme",
+      "category": "herb_spice"
+    },
+    {
+      "id": 101,
+      "name": "sriracha",
+      "category": "sauce"
+    },
+    {
+      "id": 102,
+      "name": "pine nuts",
+      "category": "pantry"
+    },
+    {
+      "id": 103,
+      "name": "celery",
+      "category": "vegetable"
+    },
+    {
+      "id": 104,
+      "name": "pork belly",
+      "category": "protein"
+    },
+    {
+      "id": 105,
+      "name": "creme fraiche",
+      "category": "dairy"
+    },
+    {
+      "id": 106,
+      "name": "couscous",
+      "category": "grain"
+    },
+    {
+      "id": 107,
+      "name": "rosemary",
+      "category": "herb_spice"
+    },
+    {
+      "id": 108,
+      "name": "mayonnaise",
+      "category": "sauce"
+    },
+    {
+      "id": 109,
+      "name": "walnuts",
+      "category": "pantry"
+    },
+    {
+      "id": 110,
+      "name": "cabbage",
+      "category": "vegetable"
+    },
+    {
+      "id": 111,
+      "name": "lamb mince",
+      "category": "protein"
+    },
+    {
+      "id": 112,
+      "name": "quinoa",
+      "category": "grain"
+    },
+    {
+      "id": 113,
+      "name": "parsley",
+      "category": "herb_spice"
+    },
+    {
+      "id": 114,
+      "name": "ketchup",
+      "category": "sauce"
+    },
+    {
+      "id": 115,
+      "name": "lettuce",
+      "category": "vegetable"
+    },
+    {
+      "id": 116,
+      "name": "tuna",
+      "category": "protein"
+    },
+    {
+      "id": 117,
+      "name": "bulgur wheat",
+      "category": "grain"
+    },
+    {
+      "id": 118,
+      "name": "fresh coriander",
+      "category": "herb_spice"
+    },
+    {
+      "id": 119,
+      "name": "dijon mustard",
+      "category": "sauce"
+    },
+    {
+      "id": 120,
+      "name": "peas",
+      "category": "vegetable"
+    },
+    {
+      "id": 121,
+      "name": "cod",
+      "category": "protein"
+    },
+    {
+      "id": 122,
+      "name": "plain flour",
+      "category": "grain"
+    },
+    {
+      "id": 123,
+      "name": "mint",
+      "category": "herb_spice"
+    },
+    {
+      "id": 124,
+      "name": "worcestershire sauce",
+      "category": "sauce"
+    },
+    {
+      "id": 125,
+      "name": "sweetcorn",
+      "category": "vegetable"
+    },
+    {
+      "id": 126,
+      "name": "sausages",
+      "category": "protein"
+    },
+    {
+      "id": 127,
+      "name": "oats",
+      "category": "grain"
+    },
+    {
+      "id": 128,
+      "name": "bay leaves",
+      "category": "herb_spice"
+    },
+    {
+      "id": 129,
+      "name": "balsamic vinegar",
+      "category": "sauce"
+    },
+    {
+      "id": 130,
+      "name": "aubergine",
+      "category": "vegetable"
+    },
+    {
+      "id": 131,
+      "name": "ham",
+      "category": "protein"
+    },
+    {
+      "id": 132,
+      "name": "arborio rice",
+      "category": "grain"
+    },
+    {
+      "id": 133,
+      "name": "cinnamon",
+      "category": "herb_spice"
+    },
+    {
+      "id": 134,
+      "name": "red wine vinegar",
+      "category": "sauce"
+    },
+    {
+      "id": 135,
+      "name": "cauliflower",
+      "category": "vegetable"
+    },
+    {
+      "id": 136,
+      "name": "chorizo",
+      "category": "protein"
+    },
+    {
+      "id": 137,
+      "name": "lasagne sheets",
+      "category": "grain"
+    },
+    {
+      "id": 138,
+      "name": "chilli powder",
+      "category": "herb_spice"
+    },
+    {
+      "id": 139,
+      "name": "rice vinegar",
+      "category": "sauce"
+    },
+    {
+      "id": 140,
+      "name": "green beans",
+      "category": "vegetable"
+    },
+    {
+      "id": 141,
+      "name": "beef steak",
+      "category": "protein"
+    },
+    {
+      "id": 142,
+      "name": "sushi rice",
+      "category": "grain"
+    },
+    {
+      "id": 143,
+      "name": "cayenne pepper",
+      "category": "herb_spice"
+    },
+    {
+      "id": 144,
+      "name": "white wine vinegar",
+      "category": "sauce"
+    },
+    {
+      "id": 145,
+      "name": "kale",
+      "category": "vegetable"
+    },
+    {
+      "id": 146,
+      "name": "turkey mince",
+      "category": "protein"
+    },
+    {
+      "id": 147,
+      "name": "gnocchi",
+      "category": "grain"
+    },
+    {
+      "id": 148,
+      "name": "dried mixed herbs",
+      "category": "herb_spice"
+    },
+    {
+      "id": 149,
+      "name": "honey",
+      "category": "sauce"
+    },
+    {
+      "id": 150,
+      "name": "leek",
+      "category": "vegetable"
+    },
+    {
+      "id": 151,
+      "name": "paneer",
+      "category": "protein"
+    },
+    {
+      "id": 152,
+      "name": "breadcrumbs",
+      "category": "grain"
+    },
+    {
+      "id": 153,
+      "name": "five spice",
+      "category": "herb_spice"
+    },
+    {
+      "id": 154,
+      "name": "maple syrup",
+      "category": "sauce"
+    },
+    {
+      "id": 155,
+      "name": "sweet potato",
+      "category": "vegetable"
+    },
+    {
+      "id": 156,
+      "name": "green lentils",
+      "category": "protein"
+    },
+    {
+      "id": 157,
+      "name": "burger buns",
+      "category": "grain"
+    },
+    {
+      "id": 158,
+      "name": "star anise",
+      "category": "herb_spice"
+    },
+    {
+      "id": 159,
+      "name": "tahini",
+      "category": "sauce"
+    },
+    {
+      "id": 160,
+      "name": "chilli",
+      "category": "vegetable"
+    },
+    {
+      "id": 161,
+      "name": "cannellini beans",
+      "category": "protein"
+    },
+    {
+      "id": 162,
+      "name": "cardamom",
+      "category": "herb_spice"
+    },
+    {
+      "id": 163,
+      "name": "pesto",
+      "category": "sauce"
+    },
+    {
+      "id": 164,
+      "name": "ginger",
+      "category": "vegetable"
+    },
+    {
+      "id": 165,
+      "name": "butter beans",
+      "category": "protein"
+    },
+    {
+      "id": 166,
+      "name": "mustard seeds",
+      "category": "herb_spice"
+    },
+    {
+      "id": 167,
+      "name": "thai red curry paste",
+      "category": "sauce"
+    },
+    {
+      "id": 168,
+      "name": "butternut squash",
+      "category": "vegetable"
+    },
+    {
+      "id": 169,
+      "name": "tempeh",
+      "category": "protein"
+    },
+    {
+      "id": 170,
+      "name": "fennel seeds",
+      "category": "herb_spice"
+    },
+    {
+      "id": 171,
+      "name": "thai green curry paste",
+      "category": "sauce"
+    },
+    {
+      "id": 172,
+      "name": "beansprouts",
+      "category": "vegetable"
+    },
+    {
+      "id": 173,
+      "name": "duck breast",
+      "category": "protein"
+    },
+    {
+      "id": 174,
+      "name": "nutmeg",
+      "category": "herb_spice"
+    },
+    {
+      "id": 175,
+      "name": "miso paste",
+      "category": "sauce"
+    },
+    {
+      "id": 176,
+      "name": "pak choi",
+      "category": "vegetable"
+    },
+    {
+      "id": 177,
+      "name": "white fish",
+      "category": "protein"
+    },
+    {
+      "id": 178,
+      "name": "dill",
+      "category": "herb_spice"
+    },
+    {
+      "id": 179,
+      "name": "mirin",
+      "category": "sauce"
+    },
+    {
+      "id": 180,
+      "name": "red cabbage",
+      "category": "vegetable"
+    },
+    {
+      "id": 181,
+      "name": "mackerel",
+      "category": "protein"
+    },
+    {
+      "id": 182,
+      "name": "chives",
+      "category": "herb_spice"
+    },
+    {
+      "id": 183,
+      "name": "harissa",
+      "category": "sauce"
+    },
+    {
+      "id": 184,
+      "name": "cherry tomato",
+      "category": "vegetable"
+    },
+    {
+      "id": 185,
+      "name": "sage",
+      "category": "herb_spice"
+    },
+    {
+      "id": 186,
+      "name": "rocket",
+      "category": "vegetable"
+    },
+    {
+      "id": 187,
+      "name": "lemongrass",
+      "category": "herb_spice"
+    },
+    {
+      "id": 188,
+      "name": "avocado",
+      "category": "vegetable"
+    },
+    {
+      "id": 189,
+      "name": "kaffir lime leaves",
+      "category": "herb_spice"
+    },
+    {
+      "id": 190,
+      "name": "shallot",
+      "category": "vegetable"
+    },
+    {
+      "id": 191,
+      "name": "sesame seeds",
+      "category": "herb_spice"
+    },
+    {
+      "id": 192,
+      "name": "asparagus",
+      "category": "vegetable"
+    },
+    {
+      "id": 193,
+      "name": "cumin seeds",
+      "category": "herb_spice"
+    },
+    {
+      "id": 194,
+      "name": "radish",
+      "category": "vegetable"
+    },
+    {
+      "id": 195,
+      "name": "ground ginger",
+      "category": "herb_spice"
+    },
+    {
+      "id": 196,
+      "name": "beetroot",
+      "category": "vegetable"
+    },
+    {
+      "id": 197,
+      "name": "allspice",
+      "category": "herb_spice"
+    },
+    {
+      "id": 198,
+      "name": "parsnip",
+      "category": "vegetable"
+    },
+    {
+      "id": 199,
+      "name": "sumac",
+      "category": "herb_spice"
+    }
+  ],
+  "recipes": [
+    {
+      "id": 0,
+      "name": "Salmon & Onion Pasta",
+      "cuisine": "italian",
+      "ingredient_ids": [
+        0,
+        5,
+        7,
+        16,
+        28,
+        30,
+        34,
+        85,
+        93
+      ]
+    },
+    {
+      "id": 1,
+      "name": "Chickpeas & Ginger Masala",
+      "cuisine": "indian",
+      "ingredient_ids": [
+        4,
+        7,
+        22,
+        23,
+        32,
+        58,
+        62,
+        128,
+        135,
+        164,
+        185,
+        199
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Beef Mince & Chilli Quesadillas",
+      "cuisine": "mexican",
+      "ingredient_ids": [
+        7,
+        9,
+        18,
+        22,
+        23,
+        29,
+        32,
+        91,
+        99,
+        148,
+        160
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Beef Mince & Onion Burrito Bowl",
+      "cuisine": "mexican",
+      "ingredient_ids": [
+        0,
+        5,
+        7,
+        18,
+        22,
+        23,
+        84,
+        115,
+        193
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Cannellini Beans & Onion Pilaf",
+      "cuisine": "middle_eastern",
+      "ingredient_ids": [
+        0,
+        5,
+        7,
+        43,
+        106,
+        130,
+        133,
+        149,
+        159,
+        161,
+        199
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Duck Breast & Asparagus Fried Rice",
+      "cuisine": "chinese",
+      "ingredient_ids": [
+        6,
+        7,
+        20,
+        23,
+        72,
+        98,
+        145,
+        153,
+        173,
+        191,
+        192
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Lamb Mince & Mushroom Traybake",
+      "cuisine": "british",
+      "ingredient_ids": [
+        0,
+        7,
+        23,
+        54,
+        55,
+        56,
+        76,
+        103,
+        111,
+        185
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Pork Mince & Shallot Salad",
+      "cuisine": "thai",
+      "ingredient_ids": [
+        22,
+        23,
+        60,
+        70,
+        97,
+        123,
+        190,
+        196
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Eggs & Onion Noodle Soup",
+      "cuisine": "thai",
+      "ingredient_ids": [
+        0,
+        7,
+        13,
+        26,
+        62,
+        92,
+        96,
+        105
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Lamb Mince & Aubergine Masala",
+      "cuisine": "indian",
+      "ingredient_ids": [
+        4,
+        7,
+        8,
+        16,
+        22,
+        111,
+        118,
+        130
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Beef Steak & Mushroom Fried Rice",
+      "cuisine": "chinese",
+      "ingredient_ids": [
+        6,
+        7,
+        8,
+        14,
+        23,
+        56,
+        91,
+        99,
+        141,
+        153,
+        158,
+        191
+      ]
+    },
+    {
+      "id": 11,
+      "name": "Kidney Beans & Chilli Fajitas",
+      "cuisine": "mexican",
+      "ingredient_ids": [
+        0,
+        7,
+        20,
+        22,
+        37,
+        41,
+        82,
+        160
+      ]
+    },
+    {
+      "id": 12,
+      "name": "Cannellini Beans & Cucumber Mezze Bowl",
+      "cuisine": "middle_eastern",
+      "ingredient_ids": [
+        3,
+        7,
+        15,
+        30,
+        37,
+        80,
+        127,
+        161,
+        168,
+        183,
+        186
+      ]
+    },
+    {
+      "id": 13,
+      "name": "Pork Belly & Avocado Donburi",
+      "cuisine": "japanese",
+      "ingredient_ids": [
+        6,
+        21,
+        23,
+        35,
+        37,
+        44,
+        100,
+        104,
+        176,
+        188
+      ]
+    },
+    {
+      "id": 14,
+      "name": "Pork Belly & Carrot Katsu",
+      "cuisine": "japanese",
+      "ingredient_ids": [
+        6,
+        7,
+        24,
+        31,
+        104,
+        110,
+        142,
+        164,
+        191
+      ]
+    },
+    {
+      "id": 15,
+      "name": "White Fish & Green Beans Massaman",
+      "cuisine": "thai",
+      "ingredient_ids": [
+        7,
+        9,
+        23,
+        43,
+        70,
+        106,
+        140,
+        145,
+        164,
+        177,
+        189
+      ]
+    },
+    {
+      "id": 16,
+      "name": "Eggs & Garlic Dal",
+      "cuisine": "indian",
+      "ingredient_ids": [
+        7,
+        8,
+        22,
+        23,
+        26,
+        103,
+        112,
+        133,
+        144,
+        150,
+        162
+      ]
+    },
+    {
+      "id": 17,
+      "name": "Salmon & Garlic Biryani",
+      "cuisine": "indian",
+      "ingredient_ids": [
+        1,
+        7,
+        8,
+        23,
+        34,
+        85,
+        99,
+        130,
+        144
+      ]
+    },
+    {
+      "id": 18,
+      "name": "Cod & Mushroom Roast",
+      "cuisine": "british",
+      "ingredient_ids": [
+        17,
+        23,
+        24,
+        38,
+        56,
+        103,
+        121,
+        133,
+        142
+      ]
+    },
+    {
+      "id": 19,
+      "name": "Cod & Onion Fajitas",
+      "cuisine": "mexican",
+      "ingredient_ids": [
+        0,
+        5,
+        7,
+        13,
+        22,
+        23,
+        38,
+        72,
+        84,
+        88,
+        121,
+        143
+      ]
+    },
+    {
+      "id": 20,
+      "name": "Chicken Thigh & Spring Onion Hotpot",
+      "cuisine": "chinese",
+      "ingredient_ids": [
+        6,
+        7,
+        8,
+        10,
+        12,
+        71,
+        72,
+        96,
+        153,
+        174,
+        191
+      ]
+    },
+    {
+      "id": 21,
+      "name": "Salmon & Leek Hotpot",
+      "cuisine": "british",
+      "ingredient_ids": [
+        14,
+        23,
+        24,
+        34,
+        62,
+        100,
+        113,
+        122,
+        150,
+        198
+      ]
+    },
+    {
+      "id": 22,
+      "name": "Chickpeas & Potato Tikka",
+      "cuisine": "indian",
+      "ingredient_ids": [
+        4,
+        7,
+        8,
+        22,
+        23,
+        32,
+        39,
+        46,
+        58,
+        61,
+        128,
+        135
+      ]
+    },
+    {
+      "id": 23,
+      "name": "Green Lentils & Bell Pepper Tagine",
+      "cuisine": "middle_eastern",
+      "ingredient_ids": [
+        7,
+        15,
+        29,
+        33,
+        40,
+        64,
+        70,
+        106,
+        109,
+        123,
+        156,
+        199
+      ]
+    },
+    {
+      "id": 24,
+      "name": "Lamb Mince & Tomato Traybake",
+      "cuisine": "italian",
+      "ingredient_ids": [
+        7,
+        15,
+        16,
+        22,
+        28,
+        37,
+        56,
+        111,
+        198
+      ]
+    },
+    {
+      "id": 25,
+      "name": "Lamb Mince & Beansprouts Dal",
+      "cuisine": "indian",
+      "ingredient_ids": [
+        7,
+        13,
+        22,
+        23,
+        45,
+        62,
+        68,
+        87,
+        111,
+        120,
+        162,
+        172
+      ]
+    },
+    {
+      "id": 26,
+      "name": "White Fish & Kale Traybake",
+      "cuisine": "italian",
+      "ingredient_ids": [
+        0,
+        7,
+        15,
+        22,
+        37,
+        92,
+        100,
+        145,
+        163,
+        177,
+        197
+      ]
+    },
+    {
+      "id": 27,
+      "name": "Beef Mince & Red Cabbage Pasta",
+      "cuisine": "italian",
+      "ingredient_ids": [
+        0,
+        7,
+        15,
+        18,
+        85,
+        100,
+        129,
+        130,
+        147,
+        163,
+        180
+      ]
+    },
+    {
+      "id": 28,
+      "name": "Paneer & Aubergine Biryani",
+      "cuisine": "indian",
+      "ingredient_ids": [
+        8,
+        45,
+        94,
+        99,
+        130,
+        151
+      ]
+    },
+    {
+      "id": 29,
+      "name": "Salmon & Spring Onion Katsu",
+      "cuisine": "japanese",
+      "ingredient_ids": [
+        7,
+        24,
+        34,
+        62,
+        80,
+        85,
+        96,
+        122,
+        134,
+        185,
+        191
+      ]
+    },
+    {
+      "id": 30,
+      "name": "Tofu & Beansprouts Fried Rice",
+      "cuisine": "chinese",
+      "ingredient_ids": [
+        7,
+        8,
+        17,
+        23,
+        50,
+        86,
+        119,
+        137,
+        172,
+        185,
+        191,
+        196
+      ]
+    },
+    {
+      "id": 31,
+      "name": "Chicken Thigh & Garlic Biryani",
+      "cuisine": "indian",
+      "ingredient_ids": [
+        7,
+        8,
+        10,
+        13,
+        16,
+        22,
+        23,
+        30,
+        32,
+        67,
+        99
+      ]
+    },
+    {
+      "id": 32,
+      "name": "Duck Breast & Bell Pepper Noodles",
+      "cuisine": "chinese",
+      "ingredient_ids": [
+        7,
+        8,
+        19,
+        36,
+        40,
+        144,
+        153,
+        158,
+        173,
+        176,
+        191
+      ]
+    },
+    {
+      "id": 33,
+      "name": "Eggs & Pak Choi Teriyaki",
+      "cuisine": "japanese",
+      "ingredient_ids": [
+        24,
+        26,
+        31,
+        69,
+        93,
+        122,
+        139,
+        176,
+        191
+      ]
+    },
+    {
+      "id": 34,
+      "name": "Prawns & Tomato Noodle Soup",
+      "cuisine": "thai",
+      "ingredient_ids": [
+        16,
+        23,
+        42,
+        86,
+        118,
+        123,
+        127,
+        167,
+        186,
+        198
+      ]
+    },
+    {
+      "id": 35,
+      "name": "Eggs & Garlic Donburi",
+      "cuisine": "japanese",
+      "ingredient_ids": [
+        7,
+        8,
+        16,
+        23,
+        24,
+        26,
+        27,
+        142,
+        162,
+        175,
+        179,
+        191
+      ]
+    },
+    {
+      "id": 36,
+      "name": "Mackerel & Radish Ramen",
+      "cuisine": "japanese",
+      "ingredient_ids": [
+        7,
+        8,
+        23,
+        30,
+        45,
+        49,
+        68,
+        181,
+        194
+      ]
+    },
+    {
+      "id": 37,
+      "name": "White Fish & Lettuce Ramen",
+      "cuisine": "japanese",
+      "ingredient_ids": [
+        7,
+        8,
+        23,
+        27,
+        115,
+        139,
+        142,
+        175,
+        177,
+        191
+      ]
+    },
+    {
+      "id": 38,
+      "name": "Tempeh & Tomato Stew",
+      "cuisine": "italian",
+      "ingredient_ids": [
+        7,
+        15,
+        16,
+        22,
+        36,
+        64,
+        69,
+        169
+      ]
+    },
+    {
+      "id": 39,
+      "name": "Eggs & Beansprouts Noodle Soup",
+      "cuisine": "thai",
+      "ingredient_ids": [
+        6,
+        7,
+        12,
+        26,
+        118,
+        160,
+        167,
+        172,
+        187
+      ]
+    },
+    {
+      "id": 40,
+      "name": "Salmon & Chilli Teriyaki",
+      "cuisine": "japanese",
+      "ingredient_ids": [
+        7,
+        31,
+        34,
+        49,
+        110,
+        125,
+        128,
+        152,
+        160,
+        174,
+        175,
+        191
+      ]
+    },
+    {
+      "id": 41,
+      "name": "Chicken Thigh & Potato Tikka",
+      "cuisine": "indian",
+      "ingredient_ids": [
+        1,
+        4,
+        7,
+        10,
+        13,
+        16,
+        22,
+        23,
+        32,
+        61,
+        62,
+        128
+      ]
+    },
+    {
+      "id": 42,
+      "name": "Chicken Thigh & Pak Choi Chow Mein",
+      "cuisine": "chinese",
+      "ingredient_ids": [
+        6,
+        10,
+        43,
+        52,
+        113,
+        149,
+        158,
+        164,
+        176
+      ]
+    },
+    {
+      "id": 43,
+      "name": "Beef Mince & Cauliflower Burrito Bowl",
+      "cuisine": "mexican",
+      "ingredient_ids": [
+        7,
+        9,
+        13,
+        18,
+        22,
+        23,
+        37,
+        84,
+        135,
+        143,
+        190
+      ]
+    },
+    {
+      "id": 44,
+      "name": "Chicken Thigh & Bell Pepper Shawarma",
+      "cuisine": "middle_eastern",
+      "ingredient_ids": [
+        4,
+        7,
+        10,
+        13,
+        15,
+        21,
+        27,
+        40,
+        80,
+        145,
+        149
+      ]
+    },
+    {
+      "id": 45,
+      "name": "Red Lentils & Cauliflower Curry",
+      "cuisine": "indian",
+      "ingredient_ids": [
+        4,
+        8,
+        13,
+        22,
+        23,
+        45,
+        59,
+        66,
+        101,
+        135
+      ]
+    },
+    {
+      "id": 46,
+      "name": "Chicken Thigh & Cabbage Donburi",
+      "cuisine": "japanese",
+      "ingredient_ids": [
+        6,
+        10,
+        12,
+        13,
+        24,
+        110,
+        179,
+        191
+      ]
+    },
+    {
+      "id": 47,
+      "name": "Chicken Breast & Celery Pie",
+      "cuisine": "british",
+      "ingredient_ids": [
+        0,
+        2,
+        7,
+        14,
+        23,
+        73,
+        103,
+        122,
+        128,
+        196
+      ]
+    },
+    {
+      "id": 48,
+      "name": "Chicken Breast & Garlic Stew",
+      "cuisine": "italian",
+      "ingredient_ids": [
+        2,
+        7,
+        8,
+        15,
+        32,
+        36,
+        37,
+        93,
+        154,
+        172
+      ]
+    },
+    {
+      "id": 49,
+      "name": "Paneer & Garlic Biryani",
+      "cuisine": "indian",
+      "ingredient_ids": [
+        7,
+        8,
+        22,
+        23,
+        62,
+        77,
+        99,
+        151,
+        180,
+        193
+      ]
+    },
+    {
+      "id": 50,
+      "name": "Kidney Beans & Ginger Fried Rice",
+      "cuisine": "chinese",
+      "ingredient_ids": [
+        7,
+        19,
+        23,
+        60,
+        72,
+        82,
+        149,
+        153,
+        164,
+        191
+      ]
+    },
+    {
+      "id": 51,
+      "name": "Beef Mince & Tomato Fajitas",
+      "cuisine": "mexican",
+      "ingredient_ids": [
+        7,
+        16,
+        18,
+        22,
+        23,
+        29,
+        38,
+        84,
+        120
+      ]
+    },
+    {
+      "id": 52,
+      "name": "Tofu & Celery Hotpot",
+      "cuisine": "chinese",
+      "ingredient_ids": [
+        7,
+        8,
+        20,
+        31,
+        49,
+        50,
+        87,
+        94,
+        103,
+        118,
+        123,
+        194
+      ]
+    },
+    {
+      "id": 53,
+      "name": "Pork Belly & Chilli Sushi Bowl",
+      "cuisine": "japanese",
+      "ingredient_ids": [
+        6,
+        23,
+        29,
+        31,
+        59,
+        70,
+        104,
+        110,
+        120,
+        122,
+        160,
+        191
+      ]
+    },
+    {
+      "id": 54,
+      "name": "Prawns & Mushroom Salad",
+      "cuisine": "italian",
+      "ingredient_ids": [
+        1,
+        3,
+        4,
+        7,
+        15,
+        22,
+        37,
+        42,
+        56,
+        101,
+        186
+      ]
+    },
+    {
+      "id": 55,
+      "name": "Prawns & Garlic Massaman",
+      "cuisine": "thai",
+      "ingredient_ids": [
+        7,
+        8,
+        23,
+        42,
+        68,
+        118,
+        119,
+        134,
+        160,
+        187
+      ]
+    },
+    {
+      "id": 56,
+      "name": "Chicken Breast & Onion Pasta",
+      "cuisine": "italian",
+      "ingredient_ids": [
+        0,
+        2,
+        7,
+        13,
+        15,
+        30,
+        36,
+        148,
+        163,
+        186
+      ]
+    },
+    {
+      "id": 57,
+      "name": "Chicken Thigh & Bell Pepper Stir-Fry",
+      "cuisine": "chinese",
+      "ingredient_ids": [
+        7,
+        10,
+        24,
+        28,
+        40,
+        72,
+        139,
+        158
+      ]
+    },
+    {
+      "id": 58,
+      "name": "Beef Steak & Garlic Fried Rice",
+      "cuisine": "chinese",
+      "ingredient_ids": [
+        7,
+        8,
+        12,
+        22,
+        25,
+        31,
+        40,
+        141,
+        153,
+        158,
+        163,
+        191
+      ]
+    },
+    {
+      "id": 59,
+      "name": "Chicken Thigh & Chilli Tacos",
+      "cuisine": "mexican",
+      "ingredient_ids": [
+        5,
+        7,
+        8,
+        10,
+        16,
+        22,
+        23,
+        29,
+        137,
+        143,
+        160
+      ]
+    },
+    {
+      "id": 60,
+      "name": "Beef Mince & Celery Stew",
+      "cuisine": "british",
+      "ingredient_ids": [
+        5,
+        7,
+        17,
+        18,
+        23,
+        31,
+        54,
+        56,
+        67,
+        76,
+        103,
+        144
+      ]
+    },
+    {
+      "id": 61,
+      "name": "Beef Steak & Shallot Noodle Soup",
+      "cuisine": "thai",
+      "ingredient_ids": [
+        7,
+        23,
+        48,
+        60,
+        101,
+        118,
+        123,
+        134,
+        141,
+        160,
+        190
+      ]
+    },
+    {
+      "id": 62,
+      "name": "Cod & Parsnip Bake",
+      "cuisine": "british",
+      "ingredient_ids": [
+        0,
+        5,
+        7,
+        11,
+        13,
+        23,
+        52,
+        86,
+        121,
+        124,
+        187,
+        198
+      ]
+    },
+    {
+      "id": 63,
+      "name": "Chicken Thigh & Parsnip Tagine",
+      "cuisine": "middle_eastern",
+      "ingredient_ids": [
+        10,
+        15,
+        53,
+        106,
+        133,
+        150,
+        159,
+        198
+      ]
+    },
+    {
+      "id": 64,
+      "name": "Sausages & Potato Risotto",
+      "cuisine": "italian",
+      "ingredient_ids": [
+        8,
+        9,
+        15,
+        19,
+        30,
+        32,
+        37,
+        44,
+        48,
+        126,
+        129
+      ]
+    },
+    {
+      "id": 65,
+      "name": "Chickpeas & Cucumber Tagine",
+      "cuisine": "middle_eastern",
+      "ingredient_ids": [
+        6,
+        9,
+        12,
+        15,
+        29,
+        58,
+        80,
+        149,
+        187,
+        190
+      ]
+    },
+    {
+      "id": 66,
+      "name": "Pork Mince & Onion Massaman",
+      "cuisine": "thai",
+      "ingredient_ids": [
+        0,
+        23,
+        24,
+        32,
+        60,
+        86,
+        97,
+        118,
+        187
+      ]
+    },
+    {
+      "id": 67,
+      "name": "Black Beans & Onion Chilli",
+      "cuisine": "mexican",
+      "ingredient_ids": [
+        0,
+        7,
+        16,
+        20,
+        22,
+        23,
+        74,
+        77,
+        85,
+        115
+      ]
+    },
+    {
+      "id": 68,
+      "name": "Sausages & Tomato Quesadillas",
+      "cuisine": "mexican",
+      "ingredient_ids": [
+        5,
+        7,
+        8,
+        9,
+        13,
+        16,
+        22,
+        23,
+        84,
+        86,
+        126,
+        190
+      ]
+    },
+    {
+      "id": 69,
+      "name": "Eggs & Garlic Teriyaki",
+      "cuisine": "japanese",
+      "ingredient_ids": [
+        7,
+        8,
+        11,
+        23,
+        26,
+        68,
+        175,
+        179,
+        197,
+        198
+      ]
+    },
+    {
+      "id": 70,
+      "name": "Red Lentils & Beetroot Roast",
+      "cuisine": "british",
+      "ingredient_ids": [
+        7,
+        11,
+        54,
+        66,
+        110,
+        122,
+        185,
+        196
+      ]
+    },
+    {
+      "id": 71,
+      "name": "Chicken Thigh & Garlic Stir-Fry",
+      "cuisine": "thai",
+      "ingredient_ids": [
+        8,
+        10,
+        38,
+        60,
+        101,
+        123,
+        130
+      ]
+    },
+    {
+      "id": 72,
+      "name": "White Fish & Onion Bake",
+      "cuisine": "italian",
+      "ingredient_ids": [
+        0,
+        7,
+        15,
+        22,
+        30,
+        48,
+        64,
+        100,
+        107,
+        147,
+        177
+      ]
+    },
+    {
+      "id": 73,
+      "name": "Green Lentils & Tomato Saag",
+      "cuisine": "indian",
+      "ingredient_ids": [
+        0,
+        7,
+        12,
+        16,
+        22,
+        23,
+        41,
+        62,
+        156,
+        162
+      ]
+    },
+    {
+      "id": 74,
+      "name": "Beef Mince & Tomato Burrito Bowl",
+      "cuisine": "mexican",
+      "ingredient_ids": [
+        0,
+        6,
+        7,
+        16,
+        18,
+        20,
+        23,
+        77,
+        85,
+        88
+      ]
+    },
+    {
+      "id": 75,
+      "name": "Cod & Sweet Potato Tacos",
+      "cuisine": "mexican",
+      "ingredient_ids": [
+        0,
+        7,
+        23,
+        43,
+        63,
+        70,
+        84,
+        118,
+        121,
+        135,
+        155,
+        195
+      ]
+    },
+    {
+      "id": 76,
+      "name": "Chicken Thigh & Potato Red Curry",
+      "cuisine": "thai",
+      "ingredient_ids": [
+        0,
+        7,
+        10,
+        12,
+        23,
+        32,
+        55,
+        86,
+        118
+      ]
+    },
+    {
+      "id": 77,
+      "name": "Cod & Tomato Enchiladas",
+      "cuisine": "mexican",
+      "ingredient_ids": [
+        0,
+        7,
+        9,
+        15,
+        16,
+        22,
+        23,
+        29,
+        84,
+        121,
+        143
+      ]
+    },
+    {
+      "id": 78,
+      "name": "Cannellini Beans & Sweet Potato Salad",
+      "cuisine": "italian",
+      "ingredient_ids": [
+        0,
+        1,
+        5,
+        7,
+        22,
+        27,
+        28,
+        113,
+        118,
+        129,
+        155,
+        161
+      ]
+    },
+    {
+      "id": 79,
+      "name": "Bacon & Aubergine Noodle Soup",
+      "cuisine": "thai",
+      "ingredient_ids": [
+        7,
+        9,
+        23,
+        24,
+        47,
+        60,
+        61,
+        90,
+        130,
+        160,
+        171
+      ]
+    }
+  ]
+}
