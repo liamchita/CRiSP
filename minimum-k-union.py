@@ -1,7 +1,8 @@
 import math, time, json
 from itertools import combinations
+from ortools.sat.python import cp_model
 
-## RESULTS
+### RESULTS ###
 
 def conversion(best_int):
     best_set = []
@@ -12,28 +13,31 @@ def conversion(best_int):
     return best_set
 
 
-def print_formated(best_comb, best_set, n, k, time_taken):
+def print_formated(best_comb, best_set, n, k, time_taken, recipes, algorithm, optimal=None):
 
     if isinstance(best_set, int):
         best_set = conversion(best_set)
 
-    print(f"""
-The best combination of {k} recipes found was: {[data["recipes"][m]["name"] for m in best_comb]}
+    print("")
+    print(f"Results for {algorithm}:")
+    if optimal is not None:
+        print(optimal)
+    print(f"""The best combination of {k} recipes found was: {[data["recipes"][m]["name"] for m in best_comb]}
 The number of ingredients needed for this was {n} and they are: {[data["ingredients"][m]["name"] for m in best_set]}
-It took {time_taken} to find the this combination of {k} recipes in a list of 80 recipes
+It took {time_taken} to find this combination of {k} recipes in a list of {len(recipes)} recipes
 """)
 
-# INITIALISATION
+
+### INITIALISATION ###
+
+k = 20
 
 with open("dataset_small.json", encoding="utf-8") as d:
     data = json.load(d)
-
 recipes = data["recipes"] # Keeps only the recipes and ignores ingridients and metadata
 
-k = 12
-
 # Builds a list with one set per recipe. Each set holds the IDs of that recipe's ingredients
-def CreateIngSet(recpies):
+def CreateIngSet(recipes):
     return [set(rcp["ingredient_ids"]) for rcp in recipes] 
 
 #Converts each recipe into a single integer with the form: 001001110... where each bit represents an ingredient whose ID is equal to the position of the bit from the rightmost bit. 1 if its present in the recipe and 0 if its not.
@@ -47,7 +51,7 @@ def CreateMasks(recipes):
     return bitmasks
 
 
-## --- BRUTE FORCE ---
+## --- BRUTE FORCE --- ##
 
 def BruteForce(recipes, k):
 
@@ -73,10 +77,10 @@ def BruteForce(recipes, k):
         
     return best_comb, best_set, best, k, elapsed
 
-#print_formated(*BruteForce(recipes, k))
+#print_formated(*BruteForce(recipes, k), recipes, "Brute Force")
 
 
-## --- BRUTE FORCE (BITMASK) ---
+## --- BRUTE FORCE (BITMASK) --- ##
 
 def BruteForceBitmask(recipes, k):
 
@@ -101,10 +105,10 @@ def BruteForceBitmask(recipes, k):
 
     return best_comb, best_int, best, k, elapsed
 
-#print_formated(*BruteForceBitmask(recipes, k))
+#print_formated(*BruteForceBitmask(recipes, k), recipes, "Brute Force (BITMASK)")
 
 
-## --- BRANCH AND BOUND ---
+## --- BRANCH AND BOUND --- ##
 
 def BranchAndBound(recipes, k, best=None, best_int=None, best_comb=None):
 
@@ -133,7 +137,7 @@ def BranchAndBound(recipes, k, best=None, best_int=None, best_comb=None):
             return
 
         # It will only reach this part of the function if the number of elements in the group is not euqal to k (not reached a leaf in the tree) and its number of ingridient is still less than the best solution so far
-        for i in range(start, n - 1):
+        for i in range(start, n):
             RecursiveSearch(i + 1, chosen + [i], current | bitmasks[i]) # Calls the function recursively starting from the next index and adding a arecipe to the group
 
     # Starting parameters. Starting with a preset group (chosen) gotten from a different approach such as greedy can greatly improve the efficiency of the BranchAndBound as it already starts with a good guess and even more of the branches are skipped directly
@@ -143,11 +147,10 @@ def BranchAndBound(recipes, k, best=None, best_int=None, best_comb=None):
 
     return best_comb, best_int, best, k, elapsed
 
-#print_formated(*BranchAndBound(recipes, k))
+#print_formated(*BranchAndBound(recipes, k), recipes, "Branch & Bound")
 
 
-
-## --- GREEDY ---
+## --- GREEDY --- ##
 
 def Greedy(recipes, k, masks=None, first=None):
 
@@ -186,7 +189,7 @@ def Greedy(recipes, k, masks=None, first=None):
 
     return best_comb, best_int, best, k, elapsed
         
-def MultiStartGreddy(recipes, k): # Starts the Greedy algorith from every recipe in recipes to improve its accuracy
+def MultiStartGreedy(recipes, k): # Starts the Greedy algorith from every recipe in recipes to improve its accuracy
 
     start = time.perf_counter()
 
@@ -206,23 +209,109 @@ def MultiStartGreddy(recipes, k): # Starts the Greedy algorith from every recipe
 
     return optimal_comb, optimal_int, min_num, k, elapsed
 
-#print_formated(*Greedy(recipes, k))
-#print_formated(*MultiStartGreddy(recipes, k))
+#print_formated(*Greedy(recipes, k), recipes, "Greedy")
+#print_formated(*MultiStartGreedy(recipes, k), recipes, "Mutli-start Greedy")
 
 
-## --- GREEDY + BaB
+## --- GREEDY + BaB --- ##
+
 def MutliStartGreedyBaB(recipes, k):
 
     start = time.perf_counter()
 
-    comb, int, num, _, _ = MultiStartGreddy(recipes, k)
-    return BranchAndBound(recipes, k, num, int, comb)
+    comb, integer, num, _, _ = MultiStartGreedy(recipes, k)
+    comb, integer, num, _, _ = BranchAndBound(recipes, k, num, integer, comb)
+    
+    elapsed = time.perf_counter() - start
 
-print_formated(*MutliStartGreedyBaB(recipes, k))
+    return comb, integer, num, k, elapsed
+
+#print_formated(*MutliStartGreedyBaB(recipes, k), recipes, "Mutli-start Greedy + Branch & Bound")
+
 
 ## --- GREEDY (LOCAL SEARCH) ---
 
+def GreedyLocalSearch(recipes, k):
 
+    start = time.perf_counter()
+
+    masks = CreateMasks(recipes)
+    best_comb, best_int, min_num, _, _ = MultiStartGreedy(recipes, k)
+    improved = True
+
+    while improved:
+        improved = False
+
+        for i in range(k):
+            rest = 0 # Rest contains the bits (ingredients) that would be needed if recipe i is removed from the group
+            for j in range(k):
+                if j == i:
+                    continue
+                rest = rest | masks[best_comb[j]]
+
+            for j in range(len(recipes)): # Cycles through the entire recipe list swapping each of them with the recipe to be removed, if it finds an improvement it swaps them and updates all the variables required
+                if j in best_comb:
+                    continue
+
+                if (rest | masks[j]).bit_count() < min_num:
+                    best_int = rest | masks[j]
+                    best_comb[i] = j
+                    min_num = (rest | masks[j]).bit_count()
+                    improved = True
+
+    elapsed = time.perf_counter() - start
+
+    return  best_comb, best_int, min_num, k, elapsed
+
+#print_formated(*GreedyLocalSearch(recipes, k), recipes, "Greedy Local Search")
 
 ## --- INTEGER LINEAR PROGRAMMING ---
 
+def ILP(recipes, k):
+    global optimal
+
+    start = time.perf_counter()
+
+    masks = CreateMasks(recipes)
+    n = len(masks)
+    best_comb = []
+
+    model = cp_model.CpModel() #Creates a blank model
+    x = [model.NewBoolVar(f"x{r}") for r in range(n)] #Creates a list of boolean variables for each recipe
+    y = [model.NewBoolVar(f"y{i}") for i in range(len(data["ingredients"]))] # Creates a list of boolean variables for each ingridient
+
+    model.Add(sum(x) == k) # Adds a rule to the model saying that the sum of all the elemetns in x must be equal to k. Since elements in x can only be 1 or 0, it is basically saying that the amount of elements in x (the recipes) must be equal to k since if an element in x = 1 it means that that element is ticked
+
+    for i in range(n):
+        for ing_id in recipes[i]["ingredient_ids"]: # Goes through all the elements of each recipe in the "ingridients" category (basically all the ingridients in each recipe) and creates a rule for each ingredient in the recipe  saying that if recipe i is ticked then that ingredient (element in y) must also be ticked. Basically making it that if a recipe is ticked then all its ingredients must also be.
+            model.Add(x[i] <= y[ing_id])
+
+    model.Minimize(sum(y)) #Set the goal; minimize the sum of y. Again since y only has boolean elements (1 or 0) it is minimising the total amount of ingridients ticked
+
+    
+    solver = cp_model.CpSolver() # Sets the solver 
+    solver.parameters.max_time_in_seconds = 120 # Sets a time limit for the solver
+    status = solver.Solve(model) # Contains a flag explaining the outcome of the solver: OPTIMAL/FEASABLE/INFEASABLE/MODEL_INVALID/UNKNOWN
+
+    for i in range(len(x)): # Creates the best combination list by checking what elements in x (recipes) have been solved to be ticked (x[recipe] = 1) 
+        if solver.Value(x[i]) == 1:
+            best_comb.append(i)
+
+    best_int = 0
+    for recipe in best_comb:
+        best_int |= masks[recipe]
+
+    best = best_int.bit_count()
+
+    if status == cp_model.OPTIMAL: #Uses the flags to see if it has found the optimal answer
+        optimal = "This is the optimal solution"
+    elif status == cp_model.FEASIBLE:
+        optimal = "This is not proven to be the optimal solution"
+    else:
+        optimal = "UNKNOWN"
+    
+    elapsed = time.perf_counter() - start
+
+    return  best_comb, best_int, best, k, elapsed
+
+#print_formated(*ILP(recipes, k), recipes, "Integer Linear Programming", optimal)
